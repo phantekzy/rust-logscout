@@ -20,6 +20,8 @@ fn analyze_logs(filename: &str) -> Result<f32, AnalysisError> {
             error_count += 1;
         }
     }
+    let percentage = (error_count as f32 / total_logs as f32) * 100.0;
+    Ok(percentage)
 }
 
 fn main() {
