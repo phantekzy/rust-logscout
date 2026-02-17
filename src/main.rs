@@ -28,4 +28,11 @@ fn main() {
     let log_data = "INFO: System started\nERROR: Disk full\nINFO: Retrying\nERROR: Timeout";
     fs::write("server.log", log_data).unwrap();
     let target_file = "server.log";
+    match analyze_logs(target_file) {
+        Ok(pct) => println!("Analysis Complete: {:.2}% of logs are errors.", pct),
+        Err(AnalysisError::FileNotFound) => {
+            println!("Error: System could not find {}", target_file)
+        }
+        Err(AnalysisError::EmptyLog) => println!("Error: The log file is empty."),
+    }
 }
