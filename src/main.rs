@@ -25,5 +25,5 @@ fn analyze_logs(filename: &str) -> Result<f32, AnalysisError> {
 }
 
 fn main() {
-    //
+    let log_data = "INFO: System started\nERROR: Disk full\nINFO: Retrying\nERROR: Timeout";
 }
