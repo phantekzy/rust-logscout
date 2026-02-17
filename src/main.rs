@@ -8,6 +8,7 @@ enum AnalysisError {
 
 fn analyze_logs(filename: &str) -> Result<f32, AnalysisError> {
     let content = fs::read_to_string(filename).map_err(|_| AnalysisError::FileNotFound)?;
+    let lines: Vec<&str> = content.lines().collect();
 }
 
 fn main() {
