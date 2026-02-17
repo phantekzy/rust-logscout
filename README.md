@@ -1,6 +1,6 @@
 # LOGSCOUT: TECHNICAL LOG ANALYSIS ENGINE
 
-A high-performance utility designed to demonstrate safe error handling and zero-copy string processing in Rust.
+A utility designed to demonstrate safe error handling and zero-copy string processing in Rust.
 
 ## Core Technical Concepts
 
