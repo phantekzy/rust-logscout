@@ -14,6 +14,12 @@ fn analyze_logs(filename: &str) -> Result<f32, AnalysisError> {
     }
     let total_logs = lines.len();
     let mut error_count = 0;
+
+    for line in lines {
+        if line.to_uppercase().contains("ERROR") {
+            error_count += 1;
+        }
+    }
 }
 
 fn main() {
